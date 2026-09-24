@@ -29,7 +29,7 @@ export const StatusTimeline: React.FC<StatusTimelineProps> = ({
     },
     {
       id: 'accepted',
-      title: 'Worker Accepted & En Route',
+      title: 'Worker Accepted & On Route',
       description: 'Worker confirmed appointment and is on the way',
       time: acceptedAt,
       icon: Clock,
