@@ -136,7 +136,7 @@ export const WorkerDashboard: React.FC = () => {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <StatCard
           title="Today's Jobs"
           value={worker.recentJobs}
@@ -428,9 +428,7 @@ export const WorkerDashboard: React.FC = () => {
               <h4 className="text-xs font-bold uppercase tracking-wider">How Fair Allocation Helps You</h4>
             </div>
             <p className="text-xs text-slate-300 leading-relaxed">
-              In commercial apps, 5% of workers receive 70% of gigs.
-              Seva Sphere's formula boosts your score when your recent jobs are low,
-              guaranteeing work distribution equity across all cooperative members.
+              Commercial marketplaces can concentrate opportunities among frequently selected workers. Seva Sphere's fair allocation mechanism considers recent workload to support more balanced job distribution.
             </p>
           </div>
         </div>

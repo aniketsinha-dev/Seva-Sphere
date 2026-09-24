@@ -78,7 +78,7 @@ export const BookingStatus: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-32">
       {/* Top Booking Confirmed Banner */}
-      <div className="bg-emerald-500 text-white rounded-3xl p-6 sm:p-8 mb-8 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-emerald-500 text-white rounded-3xl p-5 sm:p-8 mb-6 sm:mb-8 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold mb-2">
             <CheckCircle2 className="w-4 h-4" />
@@ -92,15 +92,15 @@ export const BookingStatus: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-emerald-600/60 backdrop-blur-sm p-4 rounded-2xl border border-emerald-400/40 text-right">
+        <div className="bg-emerald-600/60 backdrop-blur-sm p-3.5 sm:p-4 rounded-2xl border border-emerald-400/40 text-left sm:text-right w-full sm:w-auto flex sm:flex-col items-center sm:items-end justify-between sm:justify-center">
           <span className="text-[11px] text-emerald-200 block uppercase font-semibold">Estimated Amount</span>
           <span className="text-2xl font-extrabold text-white">₹{activeBooking.estimatedAmount}</span>
-          <span className="text-[10px] text-emerald-200 block">Includes Coop welfare fund</span>
+          <span className="text-[10px] text-emerald-200 hidden sm:block">Includes Coop welfare fund</span>
         </div>
       </div>
 
       {/* Connected Multi-Role Banner */}
-      <div className="mb-8 bg-slate-900 text-white p-4 sm:p-5 rounded-2xl border border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+      <div className="mb-6 sm:mb-8 bg-slate-900 text-white p-4 sm:p-5 rounded-2xl border border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
         <div className="flex items-start sm:items-center gap-3">
           <span className="w-2.5 h-2.5 rounded-full bg-brand-400 animate-ping mt-1 sm:mt-0 shrink-0" />
           <div>
@@ -129,10 +129,10 @@ export const BookingStatus: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-2 shrink-0 w-full sm:w-auto">
           <button
             onClick={handleJumpToWorker}
-            className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl flex items-center gap-1.5 transition-colors shadow-sm"
+            className="w-full sm:w-auto px-3.5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-sm"
           >
             <Briefcase className="w-3.5 h-3.5" />
             <span>Open Worker View</span>
@@ -140,7 +140,7 @@ export const BookingStatus: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
         {/* Left Column: Assigned Worker Details */}
         <div className="lg:col-span-1 space-y-6">
           {worker ? (

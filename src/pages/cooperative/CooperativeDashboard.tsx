@@ -67,7 +67,7 @@ export const CooperativeDashboard: React.FC = () => {
       </div>
 
       {/* Demo Metrics Banner Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <StatCard
           title="Total Workers"
           value="124"
@@ -225,12 +225,12 @@ export const CooperativeDashboard: React.FC = () => {
             const percentage = Math.min(100, (w.recentJobs / maxRecent) * 100);
             return (
               <div key={w.id} className="bg-slate-50 p-3 rounded-2xl border border-slate-100 flex flex-col sm:flex-row sm:items-center gap-3">
-                <div className="w-44 shrink-0">
+                <div className="w-full sm:w-44 shrink-0">
                   <span className="font-bold text-slate-900 text-xs block truncate">{w.name}</span>
                   <span className="text-[11px] text-slate-400">{w.skill} • {w.rating} ★</span>
                 </div>
 
-                <div className="flex-1">
+                <div className="flex-1 w-full sm:w-auto">
                   <div className="w-full bg-slate-200 h-3 rounded-full overflow-hidden flex">
                     <div
                       className={`h-full transition-all duration-500 rounded-full ${
@@ -245,7 +245,7 @@ export const CooperativeDashboard: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="w-36 text-right shrink-0 flex items-center justify-end gap-2 text-xs">
+                <div className="w-full sm:w-36 text-left sm:text-right shrink-0 flex items-center justify-between sm:justify-end gap-2 text-xs">
                   <span className="font-bold text-slate-800">{w.recentJobs} jobs</span>
                   <span className="text-[10px] text-slate-400">
                     ({Math.round((1 / (1 + w.recentJobs)) * 100)}% fairness)

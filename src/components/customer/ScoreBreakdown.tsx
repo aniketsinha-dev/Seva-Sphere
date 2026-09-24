@@ -37,7 +37,7 @@ export const ScoreBreakdown: React.FC<ScoreBreakdownProps> = ({
             Fair Job Allocation Engine
           </h2>
           <p className="text-xs text-slate-300 mt-1 max-w-2xl leading-relaxed">
-            Unlike gig platforms that monopolize orders to top 5% gig workers or purely nearest proximity,
+            Commercial marketplaces can concentrate opportunities among frequently selected workers or rely purely on proximity.
             Seva Sphere calculates a balanced multi-factor equity score to sustain all cooperative members.
           </p>
         </div>

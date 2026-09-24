@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 export const DemoControls: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const {
     role,
@@ -75,38 +75,38 @@ export const DemoControls: React.FC = () => {
       )}
 
       {/* Floating Toolbar Container */}
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-4 pointer-events-none">
-        <div className="bg-slate-900/95 backdrop-blur-md text-white border border-slate-700/80 rounded-2xl shadow-2xl p-2.5 sm:p-3 pointer-events-auto transition-all">
+      <div className="fixed bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-2 sm:px-4 pointer-events-none">
+        <div className="bg-slate-900/95 backdrop-blur-md text-white border border-slate-700/80 rounded-2xl shadow-2xl p-2 sm:p-3 pointer-events-auto transition-all">
           <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <span className="flex h-2.5 w-2.5 relative">
+            <div className="flex items-center gap-2 min-w-0">
+              <span className="flex h-2 w-2 sm:h-2.5 sm:w-2.5 relative shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-brand-500"></span>
               </span>
-              <span className="text-xs font-bold tracking-wide uppercase text-brand-300 flex items-center gap-1.5">
-                <Sliders className="w-3.5 h-3.5" /> Hackathon Demo Bar
+              <span className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-brand-300 flex items-center gap-1 shrink-0">
+                <Sliders className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Demo Bar
               </span>
               {activeBooking && (
-                <span className="hidden md:inline text-[11px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
-                  Job #{activeBooking.id}: {activeBooking.status.replace('_', ' ')}
+                <span className="text-[10px] sm:text-[11px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30 truncate max-w-[160px] sm:max-w-none">
+                  #{activeBooking.id}: {activeBooking.status.replace('_', ' ')}
                 </span>
               )}
             </div>
 
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1 shrink-0">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 text-xs flex items-center gap-1 transition-colors"
+                className="text-slate-400 hover:text-white px-2 py-1 rounded-lg hover:bg-slate-800 text-[11px] sm:text-xs flex items-center gap-1 transition-colors"
                 title={isOpen ? 'Minimize bar' : 'Expand bar'}
               >
-                {isOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
-                <span className="text-[11px] hidden sm:inline">{isOpen ? 'Hide' : 'Quick Actions'}</span>
+                {isOpen ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronUp className="w-3.5 h-3.5" />}
+                <span>{isOpen ? 'Minimize' : 'Actions'}</span>
               </button>
             </div>
           </div>
 
           {isOpen && (
-            <div className="mt-2.5 pt-2.5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2">
+            <div className="mt-2 pt-2 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2 max-h-[50vh] overflow-y-auto">
               {/* Scenario Presets */}
               <div className="flex flex-wrap items-center gap-1.5">
                 <span className="text-[11px] text-slate-400 font-medium mr-1 hidden sm:inline">1-Click Scenarios:</span>

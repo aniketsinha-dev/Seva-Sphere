@@ -19,7 +19,7 @@ export const Landing: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-teal-900 via-slate-900 to-slate-900 text-white pt-16 pb-24 px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-b from-teal-900 via-slate-900 to-slate-900 text-white pt-10 sm:pt-16 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8">
         {/* Subtle grid pattern background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f766e15_1px,transparent_1px),linear-gradient(to_bottom,#0f766e15_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         
@@ -29,7 +29,7 @@ export const Landing: React.FC = () => {
             <span>Cooperative-Owned Digital Public Infrastructure</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight sm:leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight sm:leading-tight">
             Fairer opportunities. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-teal-200 to-emerald-400">
               Trusted services.
@@ -37,13 +37,13 @@ export const Landing: React.FC = () => {
             Stronger cooperatives.
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
             A cooperative-owned digital marketplace connecting consumers with verified skilled workers
             associated with Labour Cooperative Federations through intelligent and fair job allocation.
           </p>
 
           {/* Action CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto">
             <Link
               to="/customer"
               className="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold text-base shadow-lg shadow-brand-500/25 transition-all hover:scale-105 flex items-center justify-center gap-2"
@@ -69,11 +69,11 @@ export const Landing: React.FC = () => {
           </div>
 
           {/* Conceptual Architecture Flow Diagram */}
-          <div className="mt-16 bg-slate-850/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-6 max-w-3xl mx-auto shadow-2xl">
+          <div className="mt-12 sm:mt-16 bg-slate-850/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4 sm:p-6 max-w-3xl mx-auto shadow-2xl">
             <p className="text-xs uppercase font-bold tracking-widest text-slate-400 mb-4">
               System Flow Concept
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-center">
               <div className="bg-slate-900/80 p-3.5 rounded-xl border border-slate-700">
                 <span className="text-xs font-semibold text-slate-400 block mb-1">Step 1</span>
                 <p className="text-sm font-bold text-white">Customer</p>
@@ -103,9 +103,9 @@ export const Landing: React.FC = () => {
       </section>
 
       {/* Core Highlights & How It Works */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-extrabold text-slate-900">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             Why Cooperative-Owned Digital Marketplaces Win
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base">
